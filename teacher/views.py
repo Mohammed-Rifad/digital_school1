@@ -6,7 +6,7 @@ from .models import *
 # Create your views here.
 
 
-@api_view['POST']
+@api_view(['POST'])
 def auth_check(request):
      
     params=request.data
