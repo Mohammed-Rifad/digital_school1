@@ -1,0 +1,1 @@
+web: gunicorn digitalschool.wsgi --log-file -
