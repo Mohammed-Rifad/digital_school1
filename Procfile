@@ -1,1 +1,1 @@
-web: gunicorn digitalschool.wsgi --log-file -
+web: gunicorn DigitalSchool.wsgi --log-file -
