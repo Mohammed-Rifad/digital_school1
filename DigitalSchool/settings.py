@@ -82,8 +82,13 @@ WSGI_APPLICATION = 'DigitalSchool.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       
+        'NAME':'daafomse8ksnvd',
+        'USER':'xfhmxofqrvvyqk',
+        'PASSWORD':'549881bf1da87b5c191df2364ebebcfde3c84d97b15c3c9bb553e07f81bd6d58',
+        'HOST':'ec2-44-209-158-64.compute-1.amazonaws.com',
+        'PORT':'5432',
+
     }
 }
 
