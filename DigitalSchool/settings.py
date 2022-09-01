@@ -41,11 +41,14 @@ INSTALLED_APPS = [
     'corsheaders',
     'teacher'
 ]
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:4200',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:4200',
+# ]
+
+CORS_ORIGIN_ALLOW_ALL = true
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -82,13 +85,9 @@ WSGI_APPLICATION = 'DigitalSchool.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'daafomse8ksnvd',
-        'USER':'xfhmxofqrvvyqk',
-        'PASSWORD':'549881bf1da87b5c191df2364ebebcfde3c84d97b15c3c9bb553e07f81bd6d58',
-        'HOST':'ec2-44-209-158-64.compute-1.amazonaws.com',
-        'PORT':'5432',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        
     }
 }
 
