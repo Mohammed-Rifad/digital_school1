@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'DigitalSchool.wsgi.application'
 
 DATABASES = {
     'default': {
-       
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':'daafomse8ksnvd',
         'USER':'xfhmxofqrvvyqk',
         'PASSWORD':'549881bf1da87b5c191df2364ebebcfde3c84d97b15c3c9bb553e07f81bd6d58',
