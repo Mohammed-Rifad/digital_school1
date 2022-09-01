@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 #     'http://localhost:4200',
 # ]
 
-CORS_ORIGIN_ALLOW_ALL = true
+CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
