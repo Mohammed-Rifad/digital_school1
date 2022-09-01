@@ -111,10 +111,26 @@ def update_student(request,id):
             statusCode = 200
         else:
             pass
-        
+
     except Exception as e:
         print(e)
         statusCode = 409
         pass
 
     return Response({'statusCode':statusCode})
+
+
+
+@api_view(['GET'])
+def loadSingleStudent(request,id):
+    statusCode = 0
+    try:
+        student = Student.objects.get(id = id)
+ 
+        ser=StudentSerializer(student)
+        return Response(ser.data)
+    except Exception as e:
+        print(e)
+        statusCode = 404
+        
+        return Response({'statusCode':statusCode})
