@@ -80,7 +80,7 @@ def load_students(request):
     ser=StudentSerializer(students,many=True)
     return Response(ser.data)
 
-@api_view(['GET'])
+@api_view(['DELETE'])
 def delete_student(request,id):
      
     statusCode= 0 
