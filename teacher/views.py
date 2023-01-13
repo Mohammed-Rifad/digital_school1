@@ -80,6 +80,16 @@ def load_students(request):
     ser=StudentSerializer(students,many=True)
     return Response(ser.data)
 
+
+@api_view(['GET'])
+def search_students(request):
+    
+    search_text = request.GET['sname']
+
+    students=Student.objects.filter(s_name__icontains = search_text)
+    ser=StudentSerializer(students,many=True)
+    return Response(ser.data)
+
 @api_view(['DELETE'])
 def delete_student(request,id):
      
